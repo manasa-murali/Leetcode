@@ -1,8 +1,8 @@
 object RotateArray {
     @JvmStatic
     fun main(args: Array<String>) {
-        val arrayOf = arrayOf(1, 2)
-        val rotateBy = 3
+        val arrayOf = arrayOf(1, 2,3,4,5,6,7)
+        val rotateBy = 2
         val result = rotate(arrayOf.toIntArray(), rotateBy)
         println(result.contentToString())
 
