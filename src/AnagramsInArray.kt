@@ -1,7 +1,7 @@
 object AnagramsInArray {
     @JvmStatic
     fun main(args: Array<String>) {
-        val result = getAnagramCount(arrayOf("", ""))
+        val result = getAnagramCount(arrayOf("hello", "olleh","cat","car","tac"))
         println(result)
 
     }
