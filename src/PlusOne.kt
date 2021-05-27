@@ -14,11 +14,10 @@ object PlusOne {
             var add = if (i == array.size - 1) 1 else 0
             if ((arrayList[i] + add + carry)!=0 && (arrayList[i] + add + carry) % 10 == 0) {
                 arrayList[i] = (arrayList[i] + add + carry) % 10
+                carry = 1
                 if (i == 0) {
-                    carry = 1
                     arrayList.add(0, carry)
                 }
-                carry = 1
             } else {
                 arrayList[i] = (arrayList[i] + add + carry) % 10
                 carry = 0
