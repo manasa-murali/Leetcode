@@ -18,10 +18,10 @@ object DeleteDupicates {
         }
         while (ptr!!.next != null && curNode!!.next != null) {
             if (ptr.`val` == ptr.next!!.`val`) {
-                curNode!!.next = ptr.next!!.next
+                curNode.next = ptr.next!!.next
             } else {
-                ptr = curNode!!.next
-                curNode = curNode!!.next
+                ptr = curNode.next
+                curNode = curNode.next
             }
         }
         return head
