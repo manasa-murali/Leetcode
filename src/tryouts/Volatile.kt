@@ -2,22 +2,27 @@ package tryouts
 
 
 @Volatile
-var price = 500
+var price = 0
 
 fun main() {
 
     val thread1 = Thread {
-        if (price - 200 > 0) {
+//        synchronized(price) {
+        Thread.sleep(300)
+        if (price > 0) {
             price -= 200
             println("Thread1:" + price)
         }
+        //  }
     }
     val thread2 = Thread {
-        if (price - 400 > 0) {
+//        synchronized(price) {
+        Thread.sleep(100)
+        if (price > 0) {
             price -= 400
             println("Thread2:" + price)
         }
-
+        // }
     }
 
     thread1.start()
